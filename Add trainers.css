@@ -1,0 +1,149 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "nav box"
+        "nav box";
+    background: linear-gradient(rgb(239 161 255), rgb(227 177 247 / 59%));
+    height: 100vh;
+}
+
+/* ---------------------------------------------navbar------------------------------------ */
+.navbar {
+    display: grid;
+    grid-area: nav;
+    width: 175px;
+    height: 100vh;
+    position: fixed;
+    grid-template-rows: .4fr 1fr;
+    justify-items: center;
+    background: linear-gradient(to right, rgb(163 75 143), rgb(233 103 43));
+}
+
+.logo img {
+    width: 100px;
+    height: 90px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.item {
+    display: flex;
+    background: linear-gradient(to left, #f145ea, #8529cb);
+    margin: 10px;
+    border-radius: 7px;
+    list-style: none;
+    justify-content: center;
+    transition: .4s ease;
+}
+
+.item:hover,
+.item:active {
+    transform: scale(1.2);
+    background: linear-gradient(to left, #f14e45, #891aa5);
+}
+
+.item a {
+    padding: 2px 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* --------------------------------------Form----------------------------------- */
+.box {
+    display: flex;
+    grid-area: box;
+    margin: 50px auto 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box form {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    justify-items: center;
+    /* background:linear-gradient(rgb(222, 83, 250),rgb(218, 155, 243));  */
+    background: linear-gradient(rgb(239 161 255), rgb(227 177 247 / 59%));
+
+    width: 350px;
+    height: 375px;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    box-shadow: 0 0 10px;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.form_body {
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.form_body div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text label {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 10px 0 5px;
+}
+
+.text input {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form_body .btn {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    justify-items: center;
+}
+
+/* ------------------------------Button------------------------- */
+
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: btn;
+    align-items: center;
+    justify-items: center;
+}
+.btn button {
+    background: rgb(114 32 165);
+    /* width: 10rem; */
+    font-size: 1rem;
+    padding: 7px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #eddbdb;
+    margin: 15px;
+}
+.btn button:hover{
+    border-radius: 5px;
+    background: rgb(170, 93, 218);
+}
